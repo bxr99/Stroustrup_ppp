@@ -48,11 +48,11 @@ Q: What are some common problems with a switch-statements?
 A: (1) The value on which we switch must be of an integer, char, or enumeration type.
        In particular, you cannot switch on a string.
    (2) The values in the case labels must be constant expressions.
-	     In particular, you cannot use a variable in a case label.
+       In particular, you cannot use a variable in a case label.
    (3) You cannot use the same value for two case labels.
    (4) You can use several case labels for a single case.
    (5) Don't forget to end each case with a break.  Unfortunately, the compiler
-	     probably won't warn you if you forget.
+       probably won't warn you if you forget.
 
 Q: What is the function of each part of the header line in a for-loop, and in
    what sequence are they executed?
@@ -82,12 +82,12 @@ A: 2
 Q: How do you write a for-loop that prints every element of a vector?
 
 A: for (int i = 0; i < vector.size(); ++i) {
-     cout << vector[i] << " ";
+      cout << vector[i] << " ";
    }
 
 Q:  What does this line of code do?
 
-		vector<char> alphabet(26);
+    vector<char> alphabet(26);
 
 A:
 
