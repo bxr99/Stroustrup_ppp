@@ -75,3 +75,37 @@ A: When 's1' and 's2' are strings, 's1+s2' is a string where the characters from
    string s1 = "Hello";
    string s2 = "World";
    string s3 = s1 + s2; // "HelloWorld"
+
+Q: Give five examples of legal names that you shouldn't use because they are likely
+	 to cause confusion.
+A: foo, f00, f1, fI, Names, nameS
+
+Q: What are some good rules for choosing names?
+A: Choose meaningful names for variables, functions, etc.  Choose names that will
+   help people understand your program.  Use underscores to separate words in an
+   identifier (e.g. element_count).
+
+Q: What is type safety and why is it important?
+A: Every object is given a type when it is defined.  A program or part of a program
+   is type-safe when objects are used only according to the rules for their type.
+   (e.g. using a variable before it has been initialized is not considered type-safe)
+
+Q: Why can conversion from 'double' to 'int' be a bad thing?
+A: A double-to-int conversion truncates (always rounds down, toward zero) rather
+   than using the conventional 4/5 rounding.
+
+   double x = 2.7;
+   int y = x;			// y becomes 2
+
+
+Q: Define a rule to help decide if a conversion from one type to another is safe
+   or unsafe.
+A: Use {} initializers to avoid accidents, and when you want a conversion, check
+   the value before assigning.
+   The {}-list-based notation is known as the "universal and uniform initialization".
+
+   double x {2.7}; // OK
+   int y {x};			 // ERROR: double -> int might narrow
+
+   int a {1000};	 // OK
+   char b {a};		 // ERROR: int -> char might narrow
