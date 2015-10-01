@@ -1,6 +1,7 @@
 #include "std_lib_facilities.h"
 
 // Prints a table of characters with their corresponding integer values
+// Using a while loop
 int main()
 {
   // 'b' is char('a' + 1), 'c' is char('a' + 2)
