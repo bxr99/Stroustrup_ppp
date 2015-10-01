@@ -18,7 +18,7 @@ Q: What is the purpose of the compiler?
 A: To translate human-readable code to something the machine can "understand".
 
 Q: What is the purpose of the #include "std_lib_facilities.h" directive?
-A: It instructs the computer to make availiable ("to include") facilities
+A: It instructs the computer to make available ("to include") facilities
    from a file called 'std_lib_facilities.h'.
 
 Q: What does a '.h' suffix at the end of the file name signify in C++?
@@ -39,6 +39,6 @@ A: An IDE ("Integrated Development Environment") usually includes an editor with
    debug your code, compile it, and run it.
 
 Q: If you understand everything in the textbook, why is it necessary to practice?
-A: Repitition and practice are necessary to develop programming skills. Constant
+A: Repetition and practice are necessary to develop programming skills. Constant
    practice - for professionals that means lifelong constant practice - is the
    only way to develop and maintain a high-level practical skill.
