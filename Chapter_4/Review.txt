@@ -42,7 +42,8 @@ Q: What are some operators that can be used for strings?
 A:
 
 Q: When would a programmer prefer a switch-statement to an if-statement?
-A:
+A: The switch statement syntax is clearer than nested if-statements, especially
+   when comparing against many constants.
 
 Q: What are some common problems with a switch-statements?
 A: (1) The value on which we switch must be of an integer, char, or enumeration type.
