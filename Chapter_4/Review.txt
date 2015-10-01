@@ -1,0 +1,104 @@
+Q: What is computation?
+A: The act of producing some output based on some inputs.
+
+Q: What do we mean by inputs and outputs to a computation?  Give examples.
+A: Producing a result (output) from the argument (input) using the computation (function)
+	 (e.g. square(7))
+
+Q: What are three requirements a programmer should keep in mind when expressing
+   computations?
+A: Express computations correctly, simply, and efficiently.
+
+Q: What does an expression do?
+A: An expression computes a value from a number of operands.
+
+Q: What is the difference between a statement and an expression, as described
+   in this chapter?
+A:
+
+Q: What is an lvalue?  List the operations that require an lvalue.  Why do these
+   operators, and not the others, require an lvalue?
+A: An lvalue is short for "value that can appear on the left-hand side of an assignment".
+
+Q: What is a constant expression?
+A:
+
+Q: What is a literal?
+A:
+
+Q: What is a symbolic constant and why do we use them?
+A:
+
+Q: What is a magic constant?  Give examples.
+A:
+
+Q: What are some operators that we can use for integers and floating-point values?
+A:
+
+Q: What operators can be used on integers but not on floating-point numbers?
+A:
+
+Q: What are some operators that can be used for strings?
+A:
+
+Q: When would a programmer prefer a switch-statement to an if-statement?
+A:
+
+Q: What are some common problems with a switch-statements?
+A: (1) The value on which we switch must be of an integer, char, or enumeration type.
+			 In particular, you cannot switch on a string.
+	 (2) The values in the case labels must be constant expressions.
+	     In particular, you cannot use a variable in a case label.
+	 (3) You cannot use the same value for two case labels.
+	 (4) You can use several case labels for a single case.
+	 (5) Don't forget to end each case with a break.  Unfortunately, the compiler
+	     probably won't warn you if you forget.
+
+Q: What is the function of each part of the header line in a for-loop, and in
+	 what sequence are they executed?
+A:
+
+Q: When should the for-loop be used and when should the while-loop be used?
+A:
+
+Q: How do you print the numeric value of a char?
+A:
+
+Q: Describe what the line 'char foo(int x)' means in a function definition.
+A:
+
+Q: When should you define a separate function for part of a program?  List reasons.
+A:
+
+Q: What can you do to an int that you cannot do to a string?
+A:
+
+Q: What can you do to a string that you cannot do to an int?
+A:
+
+Q: What is the index of the third element of a vector?
+A: 2
+
+Q: How do you write a for-loop that prints every element of a vector?
+
+A: for (int i = 0; i < vector.size(); ++i) {
+			cout << vector[i] << " ";
+   }
+
+Q:  What does this line of code do?
+
+		vector<char> alphabet(26);
+
+A:
+
+Q:  Describe push_back() does to a vector.
+A:
+
+Q: What do vector's member functions begin(), end(), and size() do?
+A:
+
+Q: What makes vector's so popular/useful?
+A:
+
+Q: How do you sort the elements of a vector?
+A: sort(vector.begin(), vector.end());
