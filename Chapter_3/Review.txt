@@ -77,7 +77,7 @@ A: When 's1' and 's2' are strings, 's1+s2' is a string where the characters from
    string s3 = s1 + s2; // "HelloWorld"
 
 Q: Give five examples of legal names that you shouldn't use because they are likely
-	 to cause confusion.
+   to cause confusion.
 A: foo, f00, f1, fI, Names, nameS
 
 Q: What are some good rules for choosing names?
@@ -95,7 +95,7 @@ A: A double-to-int conversion truncates (always rounds down, toward zero) rather
    than using the conventional 4/5 rounding.
 
    double x = 2.7;
-   int y = x;			// y becomes 2
+   int y = x;      // y becomes 2
 
 
 Q: Define a rule to help decide if a conversion from one type to another is safe
@@ -105,7 +105,7 @@ A: Use {} initializers to avoid accidents, and when you want a conversion, check
    The {}-list-based notation is known as the "universal and uniform initialization".
 
    double x {2.7}; // OK
-   int y {x};			 // ERROR: double -> int might narrow
+   int y {x};      // ERROR: double -> int might narrow
 
-   int a {1000};	 // OK
-   char b {a};		 // ERROR: int -> char might narrow
+   int a {1000};   // OK
+   char b {a};     // ERROR: int -> char might narrow
