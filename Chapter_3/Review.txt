@@ -1,0 +1,77 @@
+Q: What is meant by the term "prompt"?
+A:
+
+Q: Which operator do you use to read into a variable?
+A: The input operation >> ("get from")
+
+Q: If you want the user to input an integer value into your program for a variable
+	 named 'number', what are two lines of code you could write to ask the user to
+	 do it and to input the value into your program?
+
+A: int number;
+   cin >> number;
+
+Q: What is '\n' called and what purpose does it serve?
+A: ('\n') is a newline character.
+
+Q: What terminates input into a string?
+A: A string read by using >> is (by default) terminated by whitespace.
+
+Q: What terminates input into an integer?
+A: Any non-integer character
+
+Q: How would you write
+
+			cout << "Hello, ";
+			cout << first_name;
+			cout << "!\n";
+
+	 as a single line of code?
+
+A: cout << "Hello, " << first_name << "!\n";
+
+Q: What is an object?
+A: An object is a region of memory with a type that specifies what kind of information
+   can be placed in it.
+
+Q: What is a literal?
+A: A literal is a program element that directly represents a value.
+
+	 int answer = 42; // integer literal
+	 double d = 3.14;				// floating point literal
+	 bool b = true;					// boolean literal
+
+Q: What kinds of literals are there?
+A: ('\n') newline, ('\t') tab
+
+Q: What is a variable?
+A: A named object and has a specific type.
+
+Q: What are the typical sizes for a 'char', 'int', and 'double'?
+A: char - 1 byte (8 bits)
+	 int - 4 bytes (32 bits)
+	 double - 8 bytes (64 bits)
+
+Q: What measures do we use for the size of small entities in memory, such as
+	 'ints' and 'strings'?
+A: A bit is a unit of computer memory that can hold the value 0 or 1.
+
+Q: What is the difference between = and == ?
+A: = is assignment, == test for equality
+
+Q: What is a definition?
+A: Definitions specify what code or data the name describes.  The compiler needs
+   the definition in order to allocate storage space for the thing that is being
+   created.
+
+Q: What is an initialization and how does it differ from an assignment?
+A: Initialization (giving a variable its initial value)
+	 Assignment     (giving a variable a new value)
+
+Q: What is string concatenation and how do you make it work in C++?
+A: When 's1' and 's2' are strings, 's1+s2' is a string where the characters from
+   's1' are followed by the characters from 's2'.
+
+   string s1 = "Hello";
+   string s2 = "World";
+   string s3 = s1 + s2; // "HelloWorld"
