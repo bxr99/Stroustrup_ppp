@@ -37,7 +37,7 @@ A: An object is a region of memory with a type that specifies what kind of infor
 Q: What is a literal?
 A: A literal is a program element that directly represents a value.
 
-	 int answer = 42; // integer literal
+	 int answer = 42;       // integer literal
 	 double d = 3.14;				// floating point literal
 	 bool b = true;					// boolean literal
 
