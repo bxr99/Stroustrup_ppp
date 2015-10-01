@@ -92,11 +92,12 @@ Q:  What does this line of code do?
 
 A:
 
-Q:  Describe push_back() does to a vector.
-A:
+Q: Describe push_back() does to a vector.
+A: push_back() adds a new element to a vector.  The new element becomes the last
+   element of the vector.
 
 Q: What do vector's member functions begin(), end(), and size() do?
-A:
+A: size() gives the number of elements of the vector.
 
 Q: What makes vector's so popular/useful?
 A:
