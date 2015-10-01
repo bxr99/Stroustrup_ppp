@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 
-
 // Prints a table of uppercase characters with their corresponding integer values
+// Using a for-loop
 int main()
 {
 	int i = 0;
