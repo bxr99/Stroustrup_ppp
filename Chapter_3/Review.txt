@@ -5,8 +5,8 @@ Q: Which operator do you use to read into a variable?
 A: The input operation >> ("get from")
 
 Q: If you want the user to input an integer value into your program for a variable
-	 named 'number', what are two lines of code you could write to ask the user to
-	 do it and to input the value into your program?
+   named 'number', what are two lines of code you could write to ask the user to
+   do it and to input the value into your program?
 
 A: int number;
    cin >> number;
@@ -22,11 +22,11 @@ A: Any non-integer character
 
 Q: How would you write
 
-			cout << "Hello, ";
-			cout << first_name;
-			cout << "!\n";
+     cout << "Hello, ";
+     cout << first_name;
+     cout << "!\n";
 
-	 as a single line of code?
+   as a single line of code?
 
 A: cout << "Hello, " << first_name << "!\n";
 
