@@ -46,7 +46,7 @@ A:
 
 Q: What are some common problems with a switch-statements?
 A: (1) The value on which we switch must be of an integer, char, or enumeration type.
-			 In particular, you cannot switch on a string.
+       In particular, you cannot switch on a string.
 	 (2) The values in the case labels must be constant expressions.
 	     In particular, you cannot use a variable in a case label.
 	 (3) You cannot use the same value for two case labels.
