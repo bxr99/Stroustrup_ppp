@@ -33,6 +33,7 @@ int main()
 			break;
 		}
 
+
     // first time in loop, will only execute this code once
 		if (count++ <= 1) {
 			low = val;
