@@ -33,7 +33,6 @@ int main()
 			break;
 		}
 
-
     // first time in loop, will only execute this code once
 		if (count++ <= 1) {
 			low = val;
@@ -46,7 +45,7 @@ int main()
 		++num_values;
 	}
 
-  // sort the vector
+    // sort the vector
   sort(tot_meters.begin(), tot_meters.end());
 
 	// display vector elements
