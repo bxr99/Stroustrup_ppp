@@ -2,19 +2,19 @@
 
 int main()
 {
-	vector<string> words;
-	string disliked = "broccoli";
+  vector<string> words;
+  string disliked = "broccoli";
 
-	int i = 0;
-	for (string input; cin >> input;) {
-		words.push_back(input);
-		if (input == disliked) {
-			cout << "BLEEP\n";
-		  ++i;
-		} else {
-			cout << words[i++] << '\n';
-		}
-	}
+  int i = 0;
+  for (string input; cin >> input;) {
+    words.push_back(input);
+    if (input == disliked) {
+      cout << "BLEEP\n";
+      ++i;
+    } else {
+      cout << words[i++] << '\n';
+    }
+  }
 
-	return 0;
+  return 0;
 }

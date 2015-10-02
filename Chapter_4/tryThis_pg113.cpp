@@ -4,9 +4,9 @@
 // Using a for-loop
 int main()
 {
-	int i = 0;
-	for (int char_val = char('A' + i); char_val <= 90; ++char_val) {
-		cout << char('A' + i++) << '\t' << char_val << '\n';
-	}
-	return 0;
+  int i = 0;
+  for (int char_val = char('A' + i); char_val <= 90; ++char_val) {
+    cout << char('A' + i++) << '\t' << char_val << '\n';
+  }
+  return 0;
 }
