@@ -2,6 +2,7 @@
 
 int main()
 {
+  // modified version of exercise 4
   // changed the type to double
   double val1 = 0;
   double val2 = 0;
