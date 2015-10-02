@@ -12,6 +12,6 @@ int main()
 		++i;
 		char_val = char('a' + i);
 	}
-  return 0;
 
+  return 0;
 }
