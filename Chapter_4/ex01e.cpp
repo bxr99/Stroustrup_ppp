@@ -21,11 +21,10 @@ int main()
       }
     }
 
-    if (found_match) {
+    if (found_match)
       cout << "BLEEP\n";
-    } else {
+    else
       cout << input << '\n';
-    }
   }
 
   return 0;
