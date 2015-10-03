@@ -8,14 +8,16 @@ int main()
   double v1, v2; // values
   cin >> v1 >> v2;
 
-  if (operation == "+")
+  if (operation == "+" || operation == "plus")
     cout << v1 + v2 << '\n';
-  if (operation == "-")
+  else if (operation == "-" || operation == "minus")
     cout << v1 - v2 << '\n';
-  if (operation == "*")
+  else if (operation == "*" || operation == "mul")
     cout << v1 * v2 << '\n';
-  if (operation == "/")
+  else if (operation == "/" || operation == "div")
     cout << v1 / v2 << '\n';
+  else
+    cout << "not an operation I know of\n";
 
   return 0;
 }
