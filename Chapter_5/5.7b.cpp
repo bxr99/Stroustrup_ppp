@@ -7,7 +7,7 @@ int main()
   double low_temp = 1000;   // initialize to impossibly high
   int no_of_temps = 0;
 
-  for(double temp; cin>>temp; ) { // read temp
+  for (double temp; cin>>temp; ) { // read temp
     ++no_of_temps;                // count temperatures
     sum += temp;                  // compute sum
     if (temp > high_temp) high_temp = temp;   // find high
