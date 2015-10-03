@@ -21,13 +21,20 @@ Q: What is an lvalue?  List the operations that require an lvalue.  Why do these
 A: An lvalue is short for "value that can appear on the left-hand side of an assignment".
 
 Q: What is a constant expression?
-A:
+A: A constant value is one that doesn't change.
 
 Q: What is a literal?
-A:
+A: A literal is some data that's presented directly in the code, rather than indirectly
+   through a variable or function call.
+   (e.g. 42, 128, 3.14159, 'a', "hello world")
 
 Q: What is a symbolic constant and why do we use them?
-A:
+A: A symbolic constant is a name given to a constant literal value.
+   (e.g. const int yen_per_dollar = 122;)
+
+   Defining a variable as const without initializing it will cause a compiler error
+
+   const int yen_per_dollar; // compiler error, must be initialized upon definition
 
 Q: What is a magic constant?  Give examples.
 A:
@@ -103,4 +110,4 @@ Q: What makes vector's so popular/useful?
 A:
 
 Q: How do you sort the elements of a vector?
-A: sort(vector.begin(), vector.end());
+A: sort(vector.begin(), vector.end()); or sort(vector);
