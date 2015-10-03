@@ -5,7 +5,7 @@ int square(int n)
   return n * n;
 }
 
-// Calculate and print a table of square 0-99
+// Calculate and print a table of squares 0-99
 int main()
 {
   int i = 0;  // start from 0

@@ -13,7 +13,7 @@ int main()
 
   cout << '\n';
 
-  // Traveser the vector with a range-for-loop
+  // Traverse the vector with a range-for-loop
   for (int i : v) { // for each 'i' in 'v'
     cout << i << " ";
   }
