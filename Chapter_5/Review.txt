@@ -1,0 +1,67 @@
+Q: Name four major types of errors and briefly define each one.
+A:
+
+Q: What kinds of errors can we ignore in student programs?
+A:
+
+Q: What guarantees should every completed project offer?
+A:
+
+Q: List three approaches we can take to eliminate errors in programs and produce
+   acceptable software.
+A:
+
+Q: What is a syntax error?  Give five examples.
+A:
+
+Q: What is a type error?  Give five examples.
+A:
+
+Q: What is a linker error?  Give three examples.
+A:
+
+Q: What is a logic error?  Give three examples.
+A:
+
+Q: List four potential sources of program errors discussed in the text.
+A:
+
+Q: How do you know if a result is plausible?  What techniques do you have to
+   answer such questions?
+A:
+
+Q: Compare and contrast having the caller of a function handle a run-time error
+   vs. the called function's handling the run-time error.
+A:
+
+Q: Why is using exceptions a better idea than returning an "error value"?
+A:
+
+Q: How do you test if an input operation succeeded?
+A:
+
+Q: Describe the process of how exceptions are thrown and caught.
+A:
+
+Q: Why, with a vector called v, is v[v.size()] a range error?  What would be the
+   the result of calling this?
+A:
+
+Q: Define pre-condition and post-condition; give an example (that is not the area()
+   function from this chapter), preferably a computation that requires a loop.
+A:
+
+Q: When would you not test a pre-condition?
+A:
+
+Q: When would you not test a post-condition?
+A:
+
+Q: What are the steps in debugging a program?
+A:
+
+Q: Why does commenting help with debugging?
+A:
+
+Q: How does testing differ from debugging?
+A:
