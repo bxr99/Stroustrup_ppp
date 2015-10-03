@@ -54,7 +54,7 @@ A:
 
 Q: Why, with a vector called v, is v[v.size()] a range error?  What would be the
    the result of calling this?
-A:
+A: The last element of a vector is at size()-1, this call results in a "Range error"
 
 Q: Define pre-condition and post-condition; give an example (that is not the area()
    function from this chapter), preferably a computation that requires a loop.
