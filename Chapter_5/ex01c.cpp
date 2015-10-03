@@ -27,7 +27,7 @@ int f(int x, int y, int z)
   int area2 = framed_area(1,z);
   int area3 = framed_area(y,z);
   double ratio = double(area1)/area3;
-  // ...
+  // ...program doesn't compile since this doesn't return anything
 }
 
 int main()
