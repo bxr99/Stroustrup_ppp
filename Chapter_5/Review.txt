@@ -9,19 +9,28 @@ A:
 
 Q: List three approaches we can take to eliminate errors in programs and produce
    acceptable software.
-A:
+A: (1) Organize software to minimize errors
+   (2) Eliminate most of the errors we made through debugging and testing
+   (3) Make sure the remaining errors are not serious
 
 Q: What is a syntax error?  Give five examples.
-A:
+A: Errors that are not well formed according to the C++ grammar, so the compiler
+   will reject them.
+
+   int s1 = area(7;   // error: ) missing
+   int s2 = area(7)   // error: ; missing
+   Int s3 = area(7);  // error: Int is not a type
+   int s4 = area('7); // error: non-terminated character (' missing)
 
 Q: What is a type error?  Give five examples.
 A:
 
 Q: What is a linker error?  Give three examples.
-A:
+A: An error found by the linker when it is trying to combine object files into
+   an executable program.
 
 Q: What is a logic error?  Give three examples.
-A:
+A: Errors found by the programmer looking for the causes of erroneous results.
 
 Q: List four potential sources of program errors discussed in the text.
 A:
