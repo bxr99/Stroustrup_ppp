@@ -1,5 +1,10 @@
 Q: Name four major types of errors and briefly define each one.
-A:
+A: (1) Compile-time errors: Errors found by the compiler (e.g. syntax and type errors)
+   (2) Link-time errors: Errors found the by linker when its trying to combine object
+       files into an executable program
+   (3) Run-time errors: Errors found by checks in a running program
+       (e.g. errors detected by hardware/OS, by a library, or user code)
+   (4) Logic-errors: Errors found by the programmer looking for the causes of bad results
 
 Q: What kinds of errors can we ignore in student programs?
 A:
@@ -23,9 +28,15 @@ A: Errors that are not well formed according to the C++ grammar, so the compiler
    int s4 = area('7); // error: non-terminated character (' missing)
 
 Q: What is a type error?  Give five examples.
-A:
+A: Mismatches between the types you declared(or forgot to declare) for variables,
+   functions, etc. and the types of values or expressions you assign to them, pass as
+   function arguments, etc.
 
-Q: What is a linker error?  Give three examples.
+   int x0 = arena(7); // error: undeclared function
+   int x1 = area(7);  // error: wrong number of arguments
+   int x2 = area("seven",2); // error: 1st argument has a wrong type
+
+Q: What is a link-time error?  Give three examples.
 A: An error found by the linker when it is trying to combine object files into
    an executable program.
 
@@ -41,16 +52,28 @@ A:
 
 Q: Compare and contrast having the caller of a function handle a run-time error
    vs. the called function's handling the run-time error.
-A:
+A: It seems that having the callee dealing with the errors is simpler than having
+   the caller of a function handling the error.  One benefit of this approach is that
+   the argument-checking code is in one place.  We don't have to search the whole
+   program for calls.  Also that one place is exactly where the arguments are to
+   be used, so all the information we need is easily available to do the check.
 
 Q: Why is using exceptions a better idea than returning an "error value"?
-A:
+A: Returning an "error value" has a couple problems that make it unusable in many
+   cases.
+   (1) Both the called function and all the callers must test
+   (2) A caller can forget to test, which can lead to unpredictable behavior
+   (3) Many functions do not have an "extra" return value that they can use to
+       indicate and error.
 
 Q: How do you test if an input operation succeeded?
 A:
 
 Q: Describe the process of how exceptions are thrown and caught.
-A:
+A: The basic idea is that if a function finds an error it cannot handle, it does
+   not return normally; instead it throws and exception indicating what went wrong.
+   Any direct or indirect caller can catch the exception, that is, to specify what
+   to do if the called code used throw.
 
 Q: Why, with a vector called v, is v[v.size()] a range error?  What would be the
    the result of calling this?
@@ -58,19 +81,28 @@ A: The last element of a vector is at size()-1, this call results in a "Range er
 
 Q: Define pre-condition and post-condition; give an example (that is not the area()
    function from this chapter), preferably a computation that requires a loop.
-A:
+A: A pre-condition is where there is a requirement of a function upon its argument(s).
+   The pre-condition must be true for the function to perform its action correctly.
 
 Q: When would you not test a pre-condition?
-A:
+A: The book list three reasons most often given for not checking pre-conditions
+   (1) Nobody would give bad arguments
+   (2) It would slow down my code (not a good reason for the majority)
+   (3) It is too complicated to test
 
 Q: When would you not test a post-condition?
 A:
 
 Q: What are the steps in debugging a program?
-A:
+A: (1) Get the program to compile
+   (2) Get the program to link
+   (3) Get the program to do what it is suppose to do
 
 Q: Why does commenting help with debugging?
-A:
+A: Commenting makes the program easy to read so that you have a chance of
+   spotting the bugs.
 
 Q: How does testing differ from debugging?
-A:
+A: Testing is executing a program with a large and systematically selected set
+   of inputs and comparing the results to what was expected.
+   Debugging is the activity of deliberately searching for errors and removing them.
