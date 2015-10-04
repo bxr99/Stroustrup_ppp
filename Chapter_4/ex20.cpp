@@ -22,11 +22,12 @@ int main()
     cout << "Enter a name you'd to see the score of: ";
     cin >> name;
     for (int i = 0; i < names.size(); ++i) {
-      if (name == names[i])
-       cout << values[i] << " ";
-      else
+      if (name == names[i]) {
+        cout << values[i] << " ";
+      } else {
         cout << "name not found";
         break;
+      }
     }
 
     cout << '\n';
