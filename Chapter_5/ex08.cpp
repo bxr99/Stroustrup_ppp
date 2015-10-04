@@ -15,7 +15,7 @@ int main()
   int sum = 0;
   for (int i = 0; i < N; ++i) sum += values[i];
 
-  cout << "The sum of the first " << N << " numbers ( "; //  << sum << '\n';
+  cout << "The sum of the first " << N << " numbers ( ";
   for (int i = 0; i < N; ++i) cout << values[i] << " ";
   cout << ") is " << sum << '\n';
 
