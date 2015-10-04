@@ -8,13 +8,17 @@ int main()
   try {
     //--------------------------------------------------------------------------
 
-    Cout << "Success!\n"; // Cout instead of cout
+    Cout << "Success!\n"; // bad
+    cout << "Success!\n"; // fixed
 
-    cout << "Success!\n;  // missing "
+    cout << "Success!\n;  // bad
+    cout << "Success!\n"; // fixed
 
-    cout << "Success"  << !\n" // 3 errors here (! ; ")
+    cout << "Success"  << !\n"  // bad
+    cout << "Success" << "!\n"; // fixed
 
-    cout << success << '\n'; // 'success' not declared in scope
+    cout << success << '\n';                              // bad
+    string success = "Success!"; cout << success << '\n'; // fixed
 
     string res = 7; vector<int> v(10); v[5] = res; cout << "Success!\n";
     string res = "7"; vector<string> v(10); v[5] = res; cout << "Success!\n"; // Solution 1
