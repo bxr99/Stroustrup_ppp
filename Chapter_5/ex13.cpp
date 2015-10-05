@@ -59,6 +59,5 @@ int main()
     cin >> play_again;
   }
 
-  cout << '\n';
   return 0;
 }
