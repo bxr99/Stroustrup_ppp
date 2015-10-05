@@ -1,5 +1,6 @@
 #include "std_lib_facilities.h"
 
+// hardcoding answer "1234" in for this problem temporarily
 vector<int> get_v()
 {
   vector<int> v;
@@ -20,33 +21,42 @@ int main()
 {
   vector<int> res = get_v();
   vector<int> guesses;
+  char play_again;
 
-  for (int guess; cin>>guess; ) {
-    guesses.push_back(guess);
-    if (guesses.size() == 4) break;
-  }
+  cout << "Do you want to play? (y/n): ";
+  cin >> play_again;
 
-  int count = 0;
-  for (int i = 0; i < guesses.size(); ++i) {
-    if (guesses[i] == res[i]) ++count;
-  }
+  while (play_again != 'n') {
+    for (int guess; cin>>guess; ) {
+      guesses.push_back(guess);
+      if (guesses.size() == 4) break;
+    }
 
-  switch (count) {
-    case 4:
-      cout << "four bulls";
-      break;
-    case 3:
-      cout << "three bulls one cow";
-      break;
-    case 2:
-      cout << "two bulls two cows";
-      break;
-    case 1:
-      cout << "one bull three cows";
-      break;
-    default:
-      cout << "four cows";
-      break;
+    int count = 0;
+    for (int i = 0; i < guesses.size(); ++i) {
+      if (guesses[i] == res[i]) ++count;
+    }
+
+    switch (count) {
+      case 4:
+        cout << "four bulls";
+        break;
+      case 3:
+        cout << "three bulls one cow";
+        break;
+      case 2:
+        cout << "two bulls two cows";
+        break;
+      case 1:
+        cout << "one bull three cows";
+        break;
+      default:
+        cout << "four cows";
+        break;
+    }
+    guesses.clear();
+    cout << "\nDo you want to play? (y/n): ";
+    cin >> play_again;
   }
 
   cout << '\n';
