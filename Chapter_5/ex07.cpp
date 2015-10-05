@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 
-int root1(double a, double b, double c);
-int root2(double a, double b, double c);
+double root1(double a, double b, double c);
+double root2(double a, double b, double c);
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
     cin >> c;
     cout << "x = " << root1(a,b,c) << " or x = " << root2(a,b,c) << '\n';
     return 0;
-  } catch (runtime_error &e) {
+  } catch (runtime_error   &e) {
     cerr << e.what() << '\n';
     return 1;
   } catch (...) {
@@ -30,18 +30,22 @@ int main()
 
 // pre-condition 1: a >= 1
 // pre-condition 2: if discriminant is negative, no real roots exist
-int root1(double a, double b, double c)
+double root1(double a, double b, double c)
 {
   if (a == 0) error("division by zero\n");
   if ((b*b-4*a*c) < 0) error("discriminant is negative\n");
-  return (-b + sqrt(b*b-4*a*c))/2*a;
+
+  double disc = b*b-4*a*c;
+  return (-b + sqrt(disc))/2*a;
 }
 
 // pre-condition 1: a >= 1
 // pre-condition 2: if discriminant is negative, no real roots exist
-int root2(double a, double b, double c)
+double root2(double a, double b, double c)
 {
   if (a == 0) error("division by zero\n");
   if ((b*b-4*a*c) < 0) error("discriminant is negative\n");
-  return (-b - sqrt(b*b-4*a*c))/2*a;
+
+  double disc = b*b-4*a*c;
+  return (-b - sqrt(disc))/2*a;
 }
