@@ -1,6 +1,6 @@
 #include "std_lib_facilities.h"
 
-// converts Celsius to Kelvin
+// converts Celsius to kelvin
 double c_to_k(double c)
 {
   double k = c + 273.15;
