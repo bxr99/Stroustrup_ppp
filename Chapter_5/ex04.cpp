@@ -1,5 +1,6 @@
 #include "std_lib_facilities.h"
 
+// handle bad input from inside the function
 double c_to_k(double c)
 {
   if (c < -273.15) error("Entered a value less than 0k");
