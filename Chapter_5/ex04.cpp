@@ -3,7 +3,7 @@
 // handle bad input from inside the function
 double c_to_k(double c)
 {
-  if (c < -273.15) error("Entered a value less than 0k");
+  if (c < -273.15) error("Entered a temperature less than 0k");
   double k = c + 273.15;
   return k;
 }
