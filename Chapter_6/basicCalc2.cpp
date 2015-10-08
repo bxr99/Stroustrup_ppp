@@ -9,12 +9,12 @@ int main()
   char op;
 
   cout << "Please enter expression\n";
-  cout << "add an 'e' to the end expression (e.g. 1+2*3 e): ";
+  cout << "add an ';' to the end expression (e.g. 1+2*3;): ";
   cin >> lval;
 
   if (!cin) error("No first operand");
   for (char op; cin>>op; ) {
-    if (op != 'e') cin >> rval;
+    if (op != ';') cin >> rval;
     switch (op) {
       case '+':
         lval += rval;
