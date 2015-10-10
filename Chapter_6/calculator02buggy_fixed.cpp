@@ -148,7 +148,7 @@ double term()
             {
                 double d = primary();
                 if (d == 0) error("divide by zero");
-                left = fmod(left,d);
+                left = fmod(left,d); // mod operator with doubles
                 t = ts.get();
                 break;
             }
