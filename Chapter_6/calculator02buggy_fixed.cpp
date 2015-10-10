@@ -17,6 +17,7 @@
 */
 
 #include "../std_lib_facilities.h"
+#include <math.h>  // fmod()
 
 //------------------------------------------------------------------------------
 
@@ -76,7 +77,7 @@ Token Token_stream::get() // FIX: from Token get() to Token Token_stream::get()
     switch (ch) {
     case ';':    // for "print"
     case 'q':    // for "quit"
-    case '(': case ')': case '+': case '-': case '*': case '/':
+    case '(': case ')': case '+': case '-': case '*': case '/': case '%': // FIX: added '%'
         return Token(ch);        // let each character represent itself
     case '.':
     case '0': case '1': case '2': case '3': case '4':
@@ -140,6 +141,14 @@ double term()
                 double d = primary();
                 if (d == 0) error("divide by zero");
                 left /= d;
+                t = ts.get();
+                break;
+            }
+        case '%': // FIX: added '%' case
+            {
+                double d = primary();
+                if (d == 0) error("divide by zero");
+                left = fmod(left,d);
                 t = ts.get();
                 break;
             }
