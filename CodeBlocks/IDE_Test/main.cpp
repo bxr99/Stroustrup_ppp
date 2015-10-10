@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-
-using namespace std;
+#include "std_lib_facilities.h"
 
 void print_v(vector<int> v)
 {
@@ -19,6 +15,7 @@ int main()
 		values.push_back(i);
 
 	print_v(values);
+	cout << "The header file worked!\n";
 	return 0;
 }
 
