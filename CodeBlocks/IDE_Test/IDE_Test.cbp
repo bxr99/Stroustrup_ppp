@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="calculator00.cpp" />
 		<Unit filename="std_lib_facilities.h" />
 		<Extensions>
 			<code_completion />
