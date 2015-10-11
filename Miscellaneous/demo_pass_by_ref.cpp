@@ -15,13 +15,13 @@ int main()
   int z = 7;
 
   // before
-  cout << "x= " << x << ", y= " << y << ",z= " << z;
+  cout << "x= " << x << ", y= " << y << ", z= " << z; // 1 3 7
   cout << '\n';
 
   duplicate(x,y,z);
 
   // after
-  cout << "x= " << x << ", y= " << y << ",z= " << z;
+  cout << "x= " << x << ", y= " << y << ", z= " << z; // 2 6 14
   cout << '\n';
   return 0;
 }
