@@ -1,6 +1,6 @@
 #include "std_lib_facilities.h"
 
-// demo ranged-base for loop
+// demo of ranged-base for loop
 int main()
 {
   vector<string> names;
