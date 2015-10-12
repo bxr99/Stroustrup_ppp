@@ -1,18 +1,16 @@
 #include "std_lib_facilities.h"
 
-swap_v(int, int);
-swap_r(int&, int&);
-swap_cr(const int&, const int&);
+void swap_v(int, int);
+void swap_r(int&, int&);
+void swap_cr(const int&, const int&);
 
 int main()
 {
-  int x = 7;
-  int y = 9;
-  swap_v(x,y);
-  cout << x << " " << y << '\n';
+
+  return 0;
 }
 
-swap_v(int a, int b)
+void swap_v(int a, int b)
 {
   int temp;
   temp = a;
@@ -20,7 +18,7 @@ swap_v(int a, int b)
   b = temp;
 }
 
-swap_r(int& a, int& b)
+void swap_r(int& a, int& b)
 {
   int temp;
   temp = a;
@@ -28,11 +26,13 @@ swap_r(int& a, int& b)
   b = temp;
 }
 
-swap_cr(const int& a, const int& b)
+// the program would not even compile with this function
+/*
+void swap_cr(const int& a, const int& b)
 {
   int temp;
   temp = a;
   a = b;
   b = temp;
 }
-
+*/
