@@ -4,31 +4,16 @@
 void swap(int& a, int& b);
 void print_v(vector<int> v);
 void larger(vector<int> v1, vector<int> v2);
-vector<int> fill_v();
-void sys_randomize();
 
 int main()
 {
-  srand(time(0));
-  vector<int> v1 = fill_v();
-  vector<int> v2 = fill_v();
+  cout << sizeof(char) << '\n';
+  cout << sizeof(int) << '\n';
+  cout << sizeof(double) << '\n';
+  cout << sizeof(long) << '\n';
+  cout << sizeof(string) << '\n';
 
-  print_v(v1);
-  print_v(v2);
   return 0;
-}
-
-void sys_randomize(int seed)
-{
-  srand(time(NULL));
-}
-
-vector<int> fill_v()
-{
-  vector<int> v;
-  for (int i = 0; i < 10; ++i)
-    v.push_back(rand()%101); // add random number between [0-100]
-  return v;
 }
 
 void swap(int& a, int& b)
@@ -38,7 +23,8 @@ void swap(int& a, int& b)
   b = temp;
 }
 
-void print_v(vector<int> v )
+// read and write only
+void print_v(const vector<int> v )
 {
   cout << "{ ";
   for (int i = 0; i < v.size(); ++i) {
@@ -48,7 +34,7 @@ void print_v(vector<int> v )
   cout << " }\n";
 }
 
-void larger(vector<int> v1, vector<int> v2)
+void larger(vector<int>& v1, vector<int>& v2)
 {
   if (v1.size() != v2.size()) error("Error in larger(): vector's are the same size");
   for (int i = 0; i < v1.size(); ++i) {
