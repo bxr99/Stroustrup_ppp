@@ -18,9 +18,9 @@ int main()
   return 0;
 }
 
-void sys_randomize()
+void sys_randomize(int seed)
 {
-  srand(time(0));
+  srand(time(NULL));
 }
 
 vector<int> fill_v()
