@@ -28,3 +28,9 @@ int my_find(vector<string> vs, string s, int)
 
   return -1; // couldn't find s
 }
+
+// pass-by-const-reference: no copy, read-only access
+int my_find(const vector<string>& vs, const string& s)
+{
+  // implementation ...
+}
