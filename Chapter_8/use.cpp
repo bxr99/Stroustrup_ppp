@@ -1,4 +1,3 @@
-// chapter 8 drill question 1
 #include <iostream>
 #include "my.h"
 
