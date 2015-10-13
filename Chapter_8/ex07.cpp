@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
+#include <algorithm> // sort()
 #include <stdexcept>
 
 void print_age(const std::vector<double>&);
@@ -62,7 +62,7 @@ int main()
     // TODO: make copies of stuff
 
     return 0;
-  } catch (const std::invalid_argument& e) { // catch error regardless of type
+  } catch (const std::invalid_argument& e) {
     std::cerr << "Error caught: " << e.what() << '\n';
     return 1;
   }
