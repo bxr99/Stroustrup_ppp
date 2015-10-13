@@ -10,6 +10,7 @@ void print_v(std::vector<int>);
 int main()
 {
   std::vector<int> v1 = {1,3,5,7,9};
+  print_v(v1);
   reverse_2(v1);
   print_v(v1);
   return 0;
@@ -40,10 +41,8 @@ std::vector<int> reverse_1(const std::vector<int> v)
 // any other vectors (hint: swap)
 void reverse_2(std::vector<int>& v)
 {
-  int tmp = 0; // placeholder for index
-  for (int i = v.size()-1; i >= 0; --i) {
-    swap(v[tmp++],v[i]);
-  }
+  for (int i = 0; i < v.size()/2; ++i)
+    swap(v[i],v[v.size()-1-i]);
 }
 
 void swap(int& a, int& b)
