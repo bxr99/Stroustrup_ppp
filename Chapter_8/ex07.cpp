@@ -1,29 +1,26 @@
+
 #include <iostream>
-#include <vector>
 #include <string>
-#include <algorithm> // sort()
+#include <vector>
+#include <algorithm>
 #include <stdexcept>
 
-void print_age(const std::vector<double>&);
-void print_name(const std::vector<std::string>&);
-void print_pair(const std::vector<std::string>&, const std::vector<double>&);
-void read_names(); // just 5 names, later change to arbitrary amount
-void read_pairs(); // read both names, and an age
+// global variables
+std::vector<std::string> names;
+std::vector<double> ages;
 
-// read five names
 void read_names()
 {
-  std::vector<std::string> names;
   std::string s = "";
-
-  for (int i = 0; i < 5; ++i) {
+ for (int i = 0; i < 5; ++i) {
+    std::cout << "Enter name (followed by <enter>): ";
     std::cin >> s;
     names.push_back(s);
   }
+  std::cout << '\n';
 }
 
-
-void print_age(const std::vector<double>& v)
+void print_names(const std::vector<std::string>& v)
 {
   std::cout << "{ ";
   for (int i = 0; i < v.size(); ++i) {
@@ -33,55 +30,61 @@ void print_age(const std::vector<double>& v)
   std::cout << " }\n";
 }
 
-void print_name(const std::vector<std::string>& v)
+void read_ages_of(const std::vector<std::string>& v)
 {
-  std::cout << "{ ";
-  for (int i = 0; i < v.size(); ++i) {
-    std::cout << v[i];
-    if (i != v.size()-1) std::cout << ", ";
-  }
-  std::cout << " }\n";
-}
-
-void read_pairs(std::vector<std::string>& names, std::vector<double>& ages)
-{
-  std::string name = "";
   double age = 0;
   for (int i = 0; i < 5; ++i) {
-    std::cout << "Type a name and an age (separated by <space>): ";
-    std::cin >> name >> age;
-    names.push_back(name);
+    std::cout << "Enter age of " << v[i] << ": ";
+    std::cin >> age;
     ages.push_back(age);
   }
-  std::cout << std::endl;
+  std::cout << '\n';
 }
 
 void print_pairs(const std::vector<std::string>& names, const std::vector<double>& ages)
 {
-  if (names.size() != ages.size()) {
-    throw std::invalid_argument("Vectors must be the same size");
-  }
-
+  if (names.size() != ages.size()) throw std::invalid_argument("Vectors must be same size");
   for (int i = 0; i < names.size(); ++i) {
-    std::cout << "(" << names[i] << "," << ages[i] << ")\n";
+    std::cout << "(" << names[i] << ", " << ages[i] << ")\n";
   }
+}
+
+void swap(int& a, int& b)
+{
+  int temp = a;
+  a = b;
+  b = a;
+}
+
+int get_index(const std::vector<std::string>& names, const std::string& name)
+{
+  for (int i = 0; i < names.size(); ++i)
+    if (name == names[i]) return i;
+  throw std::invalid_argument(name + " not found");
 }
 
 int main()
 {
   try {
+    read_names();
+    read_ages_of(names);
 
-    std::vector<std::string> original_names;
-    std::vector<double> orignal_ages;
+    std::vector<std::string> original_names = names;
+    std::vector<double> original_ages = ages;
 
-    read_pairs(original_names, orignal_ages);
-    print_pairs(original_names, orignal_ages);
+    std::sort(names.begin(),names.end());
 
-    // TODO: make copies of stuff
+    for (int i = 0; i < names.size(); ++i)
+      ages[i] = original_ages[get_index(original_names, names[i])];
+
+    print_pairs(names,ages);
 
     return 0;
   } catch (const std::invalid_argument& e) {
-    std::cerr << "Error caught: " << e.what() << '\n';
+    std::cerr << "Error Caught: " << e.what() << '\n';
     return 1;
+  } catch (...) {
+    std::cerr << "Unknown Exception\n";
+    return 2;
   }
 }
