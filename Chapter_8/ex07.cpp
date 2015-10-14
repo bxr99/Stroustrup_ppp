@@ -42,24 +42,24 @@ void print_pair(const std::vector<std::string>& names, const std::vector<double>
 int main()
 {
   try {
-    std::vector<std::string> names;
-    std::vector<double> ages;
+    std::vector<std::string> original_names;
+    std::vector<double> original_ages;
     std::string s = "";
     double age = 0;
 
     for (int i = 0; i < 5; ++i) {
       std::cout << "Enter a name (followed by <enter>): ";
       std::cin >> s;
-      names.push_back(s);
+      original_names.push_back(s);
     }
 
     for (int i = 0; i < 5; ++i) {
-      std::cout << "Enter the age of " << names[i] << ": ";
+      std::cout << "Enter the age of " << original_names[i] << ": ";
       std::cin >> age;
-      ages.push_back(age);
+      original_ages.push_back(age);
     }
 
-    // TODO: make copies of stuff
+    // TODO: add more stuff
 
     return 0;
   } catch (const std::invalid_argument& e) {
