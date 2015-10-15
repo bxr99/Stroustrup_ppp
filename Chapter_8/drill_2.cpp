@@ -25,7 +25,6 @@ int main()
   //cout << dx << " " << dy << '\n'; // 7.7 9.9
   //swap_r(dx,dy);// Error: expected reference to type int, got type double
   //cout << dx << " " << dy << '\n';
-
   return 0;
 }
 
