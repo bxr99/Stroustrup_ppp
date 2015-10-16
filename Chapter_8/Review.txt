@@ -47,7 +47,7 @@ Q: Give an example of undefined order of evaluation.  Why can undefined order of
 A:
 
 Q: What do x&&y and x||y, respectively mean?
-A: x "and" y, x x "or" y
+A: x "and" y, x "or" y
 
 Q: Which of the following is standard-conforming C++: functions within functions,
    functions within classes, classes within classes, classes within functions>
