@@ -1,0 +1,75 @@
+Q: What is the difference between a declaration and a definition?
+A:
+
+Q: How do we syntactically distinguish between a function declaration and a
+   function definition?
+A:
+
+Q: Why can't you use the functions in the calculator program from Chapter 6
+   without declaring them first?
+A:
+
+Q: Is 'int a;' a definition or just a declaration?
+A:
+
+Q: Why is it a good idea to initialize variables as they are declared?
+A:
+
+Q: What can a function declaration consist of?
+A:
+
+Q: What good does indentation do?
+A:
+
+Q: What are header files used for?
+A:
+
+Q: What is the scope of a declaration?
+A:
+
+Q: What kinds of scope are there?  Give an example of each.
+A:
+
+Q: What is the difference between pass-by-value and pass-by-reference?
+A:
+
+Q: What is the difference between pass-by-reference and pass-by-const-reference?
+A:
+
+Q: What is a swap()?
+A:
+
+Q: Would you ever define a function with a vector<double>-by-value parameter?
+A:
+
+Q: Give an example of undefined order of evaluation.  Why can undefined order of
+   evaluation be a problem?
+A:
+
+Q: What do x&&y and x||y, respectively mean?
+A: x "and" y, x x "or" y
+
+Q: Which of the following is standard-conforming C++: functions within functions,
+   functions within classes, classes within classes, classes within functions>
+A:
+
+Q: What goes into an activation record?
+A:
+
+Q: What is a call stack and why do we need one?
+A:
+
+Q: What is the purpose of a namespace?
+A:
+
+Q: How does a namespace differ from a class?
+A:
+
+Q: What is a 'using' declaration?
+A:
+
+Q: Why should you avoid 'using' directives in a header?
+A:
+
+Q: What is namespace 'std'?
+A:
