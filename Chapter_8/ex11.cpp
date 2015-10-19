@@ -12,6 +12,8 @@ int main()
 {
   try {
     std::vector<double> v = {1,2,4,7};
+    std::cout << get_smallest(v) << '\n';
+    std::cout << get_largest(v) << '\n';
     std::cout << get_mean(v) << '\n';
     std::cout << get_median(v) << '\n';
 
