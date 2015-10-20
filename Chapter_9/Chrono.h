@@ -1,15 +1,17 @@
-namespace Chrono {
+#include <iostream>
+using namespace std;
 
-  enum class Month {
-    jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
-  };
+namespace Chrono {
 
   class Date {
   public:
+    enum class Month {
+      jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
+    };
     class Invalid {}; // to throw as exception
 
-    Date(int m, int d, int y); // check for valid date and initialize
-    Date();                    // default constructor
+    Date(Month m, int d, int y); // check for valid date and initialize
+    Date();                   // default constructor
     // default copy operations are fine
 
     // nonmodifying operations
@@ -29,7 +31,7 @@ namespace Chrono {
     int y;
   };
 
-  bool is_date(Month m, int d, int y); // true for valid date
+  bool is_date(Date::Month m, int d, int y); // true for valid date
   bool leapyear(int y); // true if y is a leap year
   bool operator==(const Date& a, const Date& b);
   bool operator!=(const Date& a, const Date& b);
