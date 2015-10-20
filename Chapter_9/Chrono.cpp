@@ -19,29 +19,35 @@ namespace Chrono {
 
    }
 
-   void Date::add_day(int n)
-   {
-    //..
-   }
+  void Date::add_day(int n)
+  {
+    if (d < 1 || d > 31) throw Invalid{};
+    if (d+n > 31) throw Invalid{};
 
-   void Date::add_month(int n)
-   {
-    //..
-   }
+    d += n;
+  }
 
-   void Date::add_year(int n)
-   {
+  void Date::add_month(int n)
+  {
+    if (m < 1 || m > 12) throw Invalid{};
+    if (m+n > 12) throw Invalid{};
+
+    m += n;
+  }
+
+  void Date::add_year(int n)
+  {
     if (m == feb && d == 29 && !leapyear(y+n)) { // beware of leap years!
       m = mar; // use March 1 instead of February 29
       d = 1;
     }
     y += n;
-   }
+  }
 
    // helper functions
 
-   bool is_date(Month m, int d, int y)
-   {
+  bool is_date(Month m, int d, int y)
+  {
     // assume that y is valid
     if (d <= 0) return false; // d must be positive
     if (m < Month::jan || Month::dec < m) return false;
@@ -63,34 +69,34 @@ namespace Chrono {
     if (days_in_months < d) return false;
 
     return true;
-   }
+  }
 
-   bool leapyear(int y)
-   {
+  bool leapyear(int y)
+  {
     // TODO
-   }
+  }
 
-   bool operator==(const Date& a, const Date& b)
-   {
+  bool operator==(const Date& a, const Date& b)
+  {
     return a.month() == b.month() &&
            a.day() == b.day()     &&
            a.year() == b.year();
-   }
+  }
 
-   bool operator!=(const Date& a, const Date& b)
-   {
+  bool operator!=(const Date& a, const Date& b)
+  {
     return !(a == b);
-   }
+  }
 
-   ostream& operator<<(ostream& os, const Date& d)
-   {
+  ostream& operator<<(ostream& os, const Date& d)
+  {
     return os << '(' << d.month()
               << ',' << d.day()
               << ',' << d.year() << ')';
-   }
+  }
 
-   istream& operator>>(istream& is, Date& dd)
-   {
+  istream& operator>>(istream& is, Date& dd)
+  {
     int m, d, y;
     char ch1, ch2, ch3, ch4;
     is >> ch1 >> m >> ch2 >> d >> ch3 >> y >> ch4
@@ -102,7 +108,7 @@ namespace Chrono {
 
     dd = Date(Month(m), d, y); // update dd
     return is;
-   }
+  }
 
   enum class Day {
     sunday, monday, tuesday, wednesday, thursday, friday, saturday
