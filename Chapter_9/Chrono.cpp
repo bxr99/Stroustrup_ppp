@@ -124,3 +124,8 @@ namespace Chrono {
   }
 
 } // Chrono
+
+int main()
+{
+  Date today {1978, Month::jun, 25};
+}
