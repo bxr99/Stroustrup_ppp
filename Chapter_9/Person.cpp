@@ -17,7 +17,6 @@ public:
   // setters
   void set_name(std::string n) { name_ = n; }
   void set_age(int a) { age_ = a; }
-  void set_gender(char g) { gender_ = g; }
 
 private:
   std::string name_;
