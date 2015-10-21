@@ -17,6 +17,12 @@ public:
     }
     return names;
   }
+
+  std::vector<double> read_ages(std::vector<double>& ages)
+  {
+
+  }
+
 private:
   std::vector<std::string> name_;
   std::vector<double> age_;
