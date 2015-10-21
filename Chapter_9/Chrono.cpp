@@ -1,9 +1,10 @@
 #include "Chrono.h"
+#include "std_lib_facilities.h"
 
 namespace Chrono {
   // member function definitions
 
-  Date::Date(int yy, Month mm, int dd) : y{yy}, m{mm}, d{dd}
+  Date::Date(int yy, Month mm, int dd) : y(yy), m(mm), d(dd)
   {
     if (!is_date(yy,mm,dd)) throw Invalid{};
   }
@@ -14,7 +15,10 @@ namespace Chrono {
     return dd;
   }
 
-  Date::Date() : y{default_date().year()}, m{default_date().month()}, d{default_date().day()}
+  // when a Date object is first created, it is assigned as the default date
+  // 2001 jan 1
+  Date::Date()
+    : y(default_date().year()), m(default_date().month()), d(default_date().day())
   {
   }
 
@@ -58,6 +62,8 @@ namespace Chrono {
       case Month::nov:
         days_in_month = 30; // the rest have 30 days
         break;
+      defeault:
+        return 31;
     }
 
     if (days_in_month < d) return false;
@@ -65,9 +71,10 @@ namespace Chrono {
     return true;
   }
 
+  //TODO
   bool leapyear(int y)
   {
-
+    return false;
   }
 
   bool operator==(const Date& a, const Date& b)
@@ -110,22 +117,31 @@ namespace Chrono {
 
   Day day_of_week(const Date& d)
   {
-
+    return d;
   }
 
   Day next_Sunday(const Date& d)
   {
-
+    return d;
   }
 
   Date next_weekday(const Date& d)
   {
-
+    return d;
   }
 
 } // Chrono
 
 int main()
 {
-  Date today {1978, Month::jun, 25};
+  try {
+
+    return 0;
+  } catch (const Date::Invalid& e) {
+    cerr << "Exception caught: " << e.what() << '\n';
+    return 1;
+  } catch (...) {
+    cerr << "Unknown Exception\n";
+    return 2;
+  }
 }
