@@ -1,9 +1,14 @@
-#include "std_lib_facilities.h"
+#include <iostream>
+#include <string>
+#include <vector>
 
-// demo of ranged-base for loop
+// demo of ranged-based for loop
 int main()
 {
-  vector<string> names;
+  // for string
+  using std::string;
+
+  std::vector<string> names;
 
   // populate vector
   names.push_back("Fred");
@@ -13,16 +18,16 @@ int main()
   names.push_back("Jacob");
   names.push_back("Meredith");
 
-  for (string i : names) { // for each 'i' in 'names'
-    cout << i << " ";
+  for (string i : names) { // for each i in names
+    std::cout << i << " ";
   }
-  cout << '\n';
+  std::cout << '\n';
 
-  // also valid, making use of type deduction for the type of elements with 'auto'
+  // also valid, making use of type deuction for the type of elements with auto
   for (auto i : names) {
-    cout << i << " ";
+    std::cout << i << " ";
   }
-  cout << '\n';
+  std::cout << '\n';
 
   return 0;
 }
