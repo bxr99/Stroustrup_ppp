@@ -1,16 +1,16 @@
-#include "std_lib_facilities.h"
+#include <iostream>
 
 // demo of continue statement
 int main()
 {
   for (int i = 10; i > 0; --i) {
     if (i == 5) {
-      cout << "continue ";
+      std::cout << "continue ";
       continue;
     }
-    cout << i << " ";
+    std::cout << i << " ";
   }
-  cout << '\n';
+  std::cout << '\n';
 
   return 0;
 }
