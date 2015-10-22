@@ -1,5 +1,5 @@
 // demo pass-by-reference
-#include "std_lib_facilities.h"
+#include <iostream>
 
 void duplicate(int& a, int& b, int& c)
 {
@@ -15,13 +15,13 @@ int main()
   int z = 7;
 
   // before
-  cout << "x= " << x << ", y= " << y << ", z= " << z; // 1 3 7
-  cout << '\n';
+  std::cout << "x= " << x << ", y= " << y << ", z= " << z; // 1 3 7
+  std::cout << '\n';
 
   duplicate(x,y,z);
 
   // after
-  cout << "x= " << x << ", y= " << y << ", z= " << z; // 2 6 14
-  cout << '\n';
+  std::cout << "x= " << x << ", y= " << y << ", z= " << z; // 2 6 14
+  std::cout << '\n';
   return 0;
 }
