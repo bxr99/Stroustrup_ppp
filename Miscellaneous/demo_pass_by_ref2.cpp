@@ -2,7 +2,8 @@
 // to be made.  This is a relatively inexpensive operation for fundamental types
 // such as int, but if the parameter is of a large compound type, it may result
 // in certain overhead
-#include "std_lib_facilities.h"
+#include <string>
+using std::string;
 
 // This function takes two strings as parameters (by value), and returns the
 // result of concatenating them.  By passing the arguments by value, the function
